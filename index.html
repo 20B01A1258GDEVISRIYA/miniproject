@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            size:100%;
+            border-style:dashed;
+            border-radius:20%;
+            height: 100px;
+            width: 200px;
+            font-size: 170%;
+            background-color:purple;
+            color:white;
+            margin-top: 100px;
+            margin-left: 70px;
+            font-style:cursive;
+        }
+    </style>
+    <style type="text/css">
+        html {
+            overflow: auto;
+        }
+
+        html,
+        body,
+        div,
+        iframe {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            border: none;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        body
+        {
+            background-color:orange;
+            background-image:linear-gradient(120deg,orange,green,purple);
+        }
+         
+    </style>
+    <script src="verify.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><button onclick="displayIframeone()" id="one">study certificate</button></td>
+            <td><button onclick="displayIframetwo()" id="two">custodian certificate</button></td>
+            <td><button onclick="displayIframethree()" id="three">fee certificate</button></td>
+            <td><button onclick="displayIframefour()" id="four">concern certificate</button></td>
+            <td><button onclick="displayIframefive()" id="five">residence certificate</button></td>
+            <td><button onclick="displayIframesix()" id="six">conduct certificate</button></td>
+            <td><button onclick="displayIframeseven()" id="seven">internship certificate</button></td>
+        </tr>
+    </table>
+    <div align="center" id="iframedisplay"></div>
+</body>
+    
+</html>
