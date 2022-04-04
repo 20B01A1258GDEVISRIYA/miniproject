@@ -29,13 +29,13 @@
         }
     </style>
 </head>
-<body onclick="printFunction()">
+<body onclick="printFunction()" onload="setData()">
     <div class="div">
         <p id="i" style="font-family: cursive;">Date:_____</p>
         <br>
         <h2 align="center"><u>FEE ESTIMATION CERTIFICATE</u></h2>
         <div class="div1" style="font-family: cursive;">
-    This is to certify that <b>Ms._____</b><b>Regd.No._____</b>
+    This is to certify that <b>Ms._____</b><b>Regd.No.<span id="dis"></span></b>
     is a student of this institute.is a student of this institute.  She has joined in the 1st BDS course during August 2016. At present she is studying 3rd BDS course. 
     <br>
     <br>
@@ -72,6 +72,13 @@
         function printFunction(){
             window.print();
         }
+        function setData()
+        {
+            if(typeof(localStorage) != "undefined")
+            {
+              document.getElementById("dis").innerHTML = localStorage.regno;
+    }
+}
     </script>
 </body>
 </html>

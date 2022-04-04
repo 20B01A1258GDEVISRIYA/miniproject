@@ -19,13 +19,13 @@
         }
     </style>
 </head>
-<body onclick="printfunction()">
+<body onclick="printfunction()" onload="setData()">
     <h4 align="right" style="font-family: cursive;">Date:_____</h4>
     <h1 align="center" class="div2"><u>STUDY AND CONDUCT CERTIFICATE</u></h1>
 
     <div>
 
-      <div class="div1" style="font-family: cursive;"> &nbsp;&nbsp;&nbsp;&nbsp;  This is to certify that <b>Ms. ______, Regd. No. ______,</b></b><br><br>
+      <div class="div1" style="font-family: cursive;"> &nbsp;&nbsp;&nbsp;&nbsp;  This is to certify that <b>Ms. ______, Regd. No.<span id="dis"></span>,</b></b><br><br>
              is a student of this institute. She has joined in the First BDS course during August 2014<br><br>
              and completed her Final BDS course during August 2018.  <br><br><br><br>
               <div>
@@ -40,6 +40,13 @@
             function printfunction(){
                 window.print();
             }
+            function setData()
+        {
+            if(typeof(localStorage) != "undefined")
+            {
+              document.getElementById("dis").innerHTML = localStorage.regno;
+    }
+}
         </script>
     
 </body>

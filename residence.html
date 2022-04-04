@@ -19,11 +19,11 @@
         }
     </style>
 </head>
-<body onclick="printfunction()">
+<body onclick="printfunction()" onload="setData()">
     <h4 align="right" style="font-family: cursive;">Date:_____</h4>
     <h1 align="center" class="div2"><u>RESIDENCE CERTIFICATE</u></h1>
     <div>
-    <div class="div1" style="font-family: cursive;"> &nbsp;&nbsp;&nbsp;&nbsp;  This is to certify that <b>Ms. ______, Regd. No. ______,</b></b><br><br>
+    <div class="div1" style="font-family: cursive;"> &nbsp;&nbsp;&nbsp;&nbsp;  This is to certify that <b>Ms. ______, Regd. No.<span id="dis"></span>,</b></b><br><br>
              is a student of this institute. She has joined in the 1st BDS course during August 2016.<br><br>
              At present she is studying 3rd BDS course. <br><br><br><br>
         <div>
@@ -35,9 +35,17 @@
         <div class="div3" align="right" style="font-family: cursive;">PRINCIPAL</div>
         </div>
         <script>
-            function printfunction(){
+            function printfunction()
+            {
                 window.print();
             }
+            function setData()
+        {
+            if(typeof(localStorage) != "undefined")
+            {
+              document.getElementById("dis").innerHTML = localStorage.regno;
+    }
+}
         </script>
     
 </body>

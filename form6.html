@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <form action="conduct.html" align="center">
+    <form action="conduct.html" align="center" id="form">
        
             <input type="text" placeholder="registration number" id="data" style="padding:20px;margin-top:50px;margin-right:200px;"><br>
             <button onclick="show()" style="padding:20px;margin-top:50px;margin-right:200px;">submit</button>
@@ -17,8 +17,11 @@
     <script>
         function show()
         {
-            let a=document.getElementById('data').value;
-            document.getElementById('name').innerHTML=a;
+            if(typeof(localStorage) != "undefined")
+            {
+               localStorage.regno= document.getElementById("data").value;
+            }
+            document.getElementById("form").submit();
         }
     </script>
 </body>
